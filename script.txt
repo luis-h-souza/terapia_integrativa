@@ -1,0 +1,13 @@
+Esboço inicial para o layout do site sobre Terapia Integrativa.
+
+1. **Header**: Com um título e menu de navegação para as seções principais.
+2. **Sobre**: Uma breve introdução à terapia integrativa.
+3. **Serviços**: Uma lista de serviços oferecidos.
+4. **Depoimentos**: Feedback de clientes.
+5. **Contato**: Um formulário simples para envio de mensagens.
+
+### Próximos Passos:
+- **HTML**: Este é o esqueleto principal. Personalize o texto e adicione imagens ou ícones representativos.
+- **CSS**: Adicione estilos para melhorar a apresentação visual no arquivo `styles.css`.
+- **JavaScript**: No arquivo `scripts.js`, implemente funcionalidades interativas, como rolagem suave para as seções ou validação de formulário.
+- **PHP/MySQL**: Crie o arquivo `process_contact.php` para salvar os dados do formulário em um banco de dados MySQL ou enviar as informações por e-mail.
