@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Oxygen:wght@300;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+:root {
+  --main-color: #6FAA84;
+  --darker-color: #417059;
+  --ligther-color: #ADD1BB;
+  --subtle-color: #E6F9EE;
+
+  --error-color: #E53535;
+  --warning-color: #E5B800;
+  --info-color: #004FC4;
+  --sucsses-color: #05A660;
+
+  --dark1: #3A3A3C;
+  --dark2: #6B7588;
+  --dark3: #C7C9D9;
+  --ligth1: #DDE5E9;
+  --ligth2: #EBEBF0;
+  --ligth3: #F2F2F5;
+  --ligth4: #FAFAFC;
+  --shadow: hsla(240, 2%, 23%, 0.2);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Oxygen", system-ui, sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit; 
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.025em;
+  font-family: "Fahkwang", system-ui, sans-serif;
+}
