@@ -4,14 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/style.css">
 
@@ -28,25 +23,25 @@
             <source src="assets/hero.mp4" type="video/mp4">
         </video>
         <div class="content d-flex flex-column justify-content-between">
-            <div class="header d-flex justify-content-around align-items-baseline my-3 mx-auto pb-2">
-                <h1>Terapia Integrativa</h1>
+            <div class="header d-flex justify-content-around align-items-center my-3 mx-auto pb-2">
+                <img class="header__logo" src="./assets/terapia integrativa logo.png" alt="">
                 <nav>
-                    <ul class="nav__ul d-flex">
+                    <ul class="nav__ul mb-0 d-flex">
                         <li><a class="mx-4" href="#about">Sobre</a></li>
                         <li><a class="mx-4" href="#services">Serviços</a></li>
-                        <li><a class="mx-4" href="#testimonials">Depoimentos</a></li>
+                        <li><a class="mx-4" href="#profissionais">Profissionais</a></li>
                         <li><a class="mx-4" href="#contact">Contato</a></li>
                     </ul>
                 </nav>
                 <div class="login">
-                    <button class="btn-login" type="button">Agendar Consulta</button>
+                    <button class="btn-login" type="button">Fale conosco</button>
                 </div>
                 <br>
             </div>
-            <div class="content__cta d-flex flex-column flex-wrap align-items-start mx-4">
-                <h1>Terapia Integrativa</h1>
+            <div class="content__cta d-flex flex-column flex-wrap align-items-center my-5">
+                <h1 class="my-3">Terapia Integrativa</h1>
                 <p>Uma abordagem holística para promover o bem-estar físico, mental e emocional.</p>
-                <button class="btn-login" type="button">Saiba mais </i></button>
+                <button class="btn-login agendar my-4" type="button">Agende sua consulta</i></button>
             </div>
             <div class="content__address">
                 <p class="text-center ">
@@ -65,26 +60,66 @@
         </div>
     </section>
 
-
     <main>
+
+        <section id="services" class="section">
+            <div class="services__info d-flex flex-column justify-content-center align-items-center">
+                <h4>Bem vindo ao Terapia Integrativa</h4>
+                <h2 class="subtitle d-flex justify-content-center my-2">Serviços</h2>
+                <p class="my-2">Fazemos parceria com você ao longo de sua jornada de saúde; afastando-se da dor e fazendo com que
+                    você volte a fazer as coisas que ama.</p>
+            </div>
+
+            <div class="cards">
+
+                <div class="card shadow massagem mx-3">
+                    <div class="card-body">
+                        <h3 class="fw-bold">Massagem</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+
+                </div>
+                <div class="card shadow meditacao">
+                    <div class="card-body">
+                        <h3 class="fw-bold">Meditação</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <div class="card shadow pilates">
+                    <div class="card-body">
+                        <h3 class="fw-bold">Meditação</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <div class="card shadow hipnoterapia">
+                    <div class="card-body">
+                        <h3 class="fw-bold">Hipnoterapia</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <div class="card shadow acumputura">
+                    <div class="card-body">
+                        <h3 class="fw-bold">Acumputura</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <marquee behavior="" direction="">
+
+
+                </marquee>
+            </div>
+        </section>
 
         <section id="about" class="section">
             <div class="container">
                 <h2>Sobre</h2>
                 <p>Bem-vindo ao nosso espaço de Terapia Integrativa. Oferecemos uma abordagem holística para promover o
                     bem-estar físico, mental e emocional.</p>
-            </div>
-        </section>
-
-        <section id="services" class="section">
-            <div class="container">
-                <h2>Serviços</h2>
-                <ul>
-                    <li>Acupuntura</li>
-                    <li>Reiki</li>
-                    <li>Massoterapia</li>
-                    <li>Meditação guiada</li>
-                </ul>
             </div>
         </section>
 
@@ -134,9 +169,7 @@
             </section>
             <section class="footer-columns d-flex justify-content-evenly align-items-start my-2">
                 <div class="footer-logo">
-                    <h2>
-                        logo
-                    </h2>
+                    <img class="header__logo" src="./assets/logo texto baixo.png" alt="logo">
                 </div>
 
                 <div class="footer-links d-flex justify-content-evenly">
@@ -150,13 +183,13 @@
                                 <a href="#" title="meditação">Meditação</a>
                             </li>
                             <li>
+                                <a href="#" title="pilates">Pilates</a>
+                            </li>
+                            <li>
                                 <a href="#" title="hipnoterapia">Hipnoterapia</a>
                             </li>
                             <li>
-                                <a href="#" title="quiropraxia">Quiropraxia</a>
-                            </li>
-                            <li>
-                                <a href="#" title="reflexologia">Reflexologia</a>
+                                <a href="#" title="acumputura">Acumputura</a>
                             </li>
                         </ul>
                     </div>
@@ -233,12 +266,19 @@
                         </li>
                     </ul>
                 </div>
-                <small class="social-text">© Terapia Integrativa Ltd.<span id="year"></span>all rights reserved</small>
+                <small class="social-text">© Terapia Integrativa Ltd. <span id="year"></span> all rights
+                    reserved</small>
             </div>
         </div>
     </footer>
 
     <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
