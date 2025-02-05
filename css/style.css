@@ -11,11 +11,33 @@
   font: inherit;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: .75rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}
+
 :root {
   --main-color: #6faa84;
   --darker-color: #417059;
+  --subtle-color: #372214;
   --ligther-color: #add1bb;
-  --subtle-color: #e6f9ee;
   --bg-color: #dde5e9;
 
   --error-color: #e53535;
@@ -39,6 +61,7 @@ body {
   min-height: 100vh;
   font-family: "Oxygen", system-ui, sans-serif;
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 img,
@@ -80,13 +103,13 @@ h6 {
 .btn-login {
   color: var(--ligth2);
   background-color: var(--main-color);
-  padding: 12px 16px;
+  padding: 12px 20px;
   border-radius: 32px;
-  width: fit-content;
   font-weight: 700;
   &:hover {
     background-color: var(--darker-color);
-    transition: 0.3s ease-in;
+    transition: 0.3s linear;
+    box-shadow: 0 2px 2px 0 var(--ligther-color);
   }
 }
 
@@ -102,7 +125,7 @@ h6 {
   left: 0;
   width: 0;
   height: 1px;
-  
+
   background-color: var(--divider);
   opacity: 0;
   transition: all 0.4s ease-in-out;
@@ -127,7 +150,7 @@ h6 {
   margin: 1rem auto;
 }
 
-.hero video {
+.hero__video {
   position: absolute;
   top: 0;
   left: 0;
@@ -164,7 +187,6 @@ h6 {
   font-size: 5rem;
   font-weight: 700;
   font-family: "Fahkwang", sans-serif;
-  
 }
 .content__cta p {
   font-size: 1.25rem;
@@ -178,7 +200,8 @@ h6 {
   &:hover {
     background-color: var(--darker-color);
     outline: var(--darker-color);
-    transition: 0.3s ease-in-out;
+    transition: 0.35s linear;
+    box-shadow: 0 2px 2px 0 var(--ligther-color);
   }
 }
 
@@ -201,7 +224,6 @@ h6 {
   border-right: .0625rem solid var(--divider);
 }
 
-
 /* SERVIÇOS */
 
 .services__info {
@@ -210,7 +232,7 @@ h6 {
     color: var(--darker-color);
   }
   & h4 {
-    color: var(--dark2);
+    color: var(--subtle-color);
     opacity: 0.3;
   }
   & p {
@@ -218,61 +240,114 @@ h6 {
     width: 50ch;
     text-align: center;
   }
+  & .subtitle {
+    font-size: 4rem;
+    color: var(--darker-color);
+  }
 }
 
-.subtitle {
-  font-size: 4rem;
-  color: var(--darker-color);
+.cards {
+  display: inline-flex;
+  white-space: nowrap;
+
+  & .cardss {
+    display: flex;
+    gap: 1rem;
+    border-radius: 1.25rem;
+    background-color: var(--ligth4);
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    height: 39rem;
+    width: 24rem;
+    border: none;
+    position: relative;
+    animation: slide 10s linear infinite;
+
+    --mgcards: 1rem;
+    margin: var(--mgcards);
+
+    & .card-body {
+      padding: 2rem;
+      max-width: 24rem;
+      cursor: pointer;
+      color: var(--ligth4);
+      position: absolute;
+      bottom: 0;
+      
+      & .card-text-title {
+        font-family: "Fahkwang", sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--subtle-color);
+      }
+      & .card-text {
+        color: var(--subtle-color);
+        white-space: wrap;
+        font-size: 1.125rem;
+        font-weight: 500;
+      }
+
+      &:hover {
+        max-height: max-content;
+        background-color: var(--ligther-color);
+        color: var(--darker-color);
+        opacity: 0.8;
+        transition: 0.3s linear;
+      }
+    }
+
+    &.massagem {
+      background-image: url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+    &.meditacao {
+      background-image: url("https://plus.unsplash.com/premium_photo-1674675646818-01d7a7bae64c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+    &.pilates {
+      background-image: url("https://plus.unsplash.com/premium_photo-1663046045743-7ce2a49d82e7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+    &.hipnoterapia {
+      background-image: url("https://images.unsplash.com/photo-1592947945242-69312358628b?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+    &.acumputura {
+      background-image: url("https://img.freepik.com/fotos-gratis/terapeuta-de-close-up-fazendo-acupuntura_23-2148815317.jpg?semt=ais_hybrid");
+    }
+  }
+}
+@keyframes slide {
+  to {
+    transform: translateX(calc(-100% - var(--mgcards)));
+  }
 }
 
-.cards{
+.cards .massagem {
+  animation-timing-function: 0s;
+}
+
+/* CONTATO */
+
+.contato {
   display: flex;
+  gap: .75rem;
   flex-wrap: wrap;
+  border: 2px solid var(--bg-color);
+  color: var(--dark1);
+  outline: none;
+  min-height: 1rem;
+  font-size: 1.2rem;
+  flex: 1 0 3rem;
+  padding: .5rem .75rem;
+  border-radius: 2rem;
+}
+.contato-area {
+  flex: 1 0 auto;
+  border-radius: 1rem;
 }
 
-.card {
-  display: flex;
-  gap: 1rem;
-  margin: 1rem;
-  border-radius: 1.25rem;
-  background-color: var(--ligth4);
-  background-position: center;
-  background-size: cover;
-  height: 40rem;
-  width: 24rem;
-  border: none;
-  position: relative;
-  &:hover {
-    background-color: var(--darker-color);
-    opacity: 0.8;
-    transition: 0.3s ease-in-out;
-  }
-  & .card-body {
-    margin: 1rem;
-    padding: 1rem;
-    cursor: pointer;
-    color: var(--ligth4);
-    position: absolute;
-    bottom: 0;
-  }
-  &.massagem {
-    background-image: url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  }
-  &.meditacao{
-    background-image: url("https://plus.unsplash.com/premium_photo-1674675646818-01d7a7bae64c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  }
-  &.pilates {
-    background-image: url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  }
-  &.hipnoterapia {
-    background-image: url("https://images.unsplash.com/photo-1592947945242-69312358628b?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  }
-  &.acumputura {
-    background-image: url("https://img.freepik.com/fotos-gratis/terapeuta-de-close-up-fazendo-acupuntura_23-2148815317.jpg?semt=ais_hybrid");
-  }
-  
+.contato::placeholder {
+  color: var(--subtle-color);
+  opacity: 0.5;
 }
-
 
 /* FOOTER */
 
@@ -319,7 +394,8 @@ footer {
 }
 
 .footer-subscribe > input::placeholder {
-  color: var(--divider);
+  color: var(--subtle-color);
+  opacity: 0.5;
 }
 
 .footer-subscribe .btn-subscribe {
@@ -333,13 +409,13 @@ footer {
   white-space: nowrap;
   border: none;
   outline: none;
-  border: 1px solid var(--subtle-color);
+  border: 1px solid var(--ligther-color);
   transition: all 0.3s ease-in-out;
 }
 
 .footer-subscribe .btn-subscribe:hover {
   background-color: var(--ligth4);
-  & i{
+  & i {
     color: var(--dark1);
   }
 }
@@ -421,7 +497,7 @@ footer {
   margin: 0 .25rem;
   color: var(--ligth2);
 }
-.footer-headline{
+.footer-headline {
   max-width: 100%;
   padding: 1rem;
 }
@@ -438,14 +514,6 @@ footer {
   color: var(--ligther-color);
 }
 
-/* i, .instagram:hover {
-  transition: 0.2s ease-in-out;
-  color: #dd2a7b;
-}
-i, .linkedin:hover {
-  transition: 0.2s ease-in-out;
-  color: #0e76a8;
-} */
 i:hover {
   transition: 0.2s ease-in-out;
   color: #fff;
@@ -454,13 +522,14 @@ i:hover {
 .social__link {
   cursor: pointer;
   background-color: var(--shadow);
-  border-radius: 50%;
+  aspect-ratio: 1/1;
   height: 3rem;
   width: 48px;
-  color: var(--dark1);
+  color: var(--subtle-color);
   font-size: 1.25rem;
   white-space: nowrap;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 .125rem .125rem 0 var(--shadow);
 }
 
 .social-links ul {
@@ -473,18 +542,18 @@ i:hover {
 
 @media (max-width: 800px) {
   .footer-top {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 1rem .5rem 2rem .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem .5rem 2rem .5rem;
   }
 
   .footer-bottom {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: space-between;
-      justify-content: center;
-      margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
   }
 }
