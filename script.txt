@@ -11,3 +11,7 @@ Esboço inicial para o layout do site sobre Terapia Integrativa.
 - **CSS**: Adicione estilos para melhorar a apresentação visual no arquivo `styles.css`.
 - **JavaScript**: No arquivo `scripts.js`, implemente funcionalidades interativas, como rolagem suave para as seções ou validação de formulário.
 - **PHP/MySQL**: Crie o arquivo `process_contact.php` para salvar os dados do formulário em um banco de dados MySQL ou enviar as informações por e-mail.
+
+Bem-vindo à PhysioZen Bem-vindo à nossa clínica, onde sua saúde e bem-estar são nossa principal prioridade. Nossa equipe de médicos, enfermeiros e profissionais de saúde experientes se dedica a fornecer serviços médicos personalizados, adaptados para atender às suas necessidades exclusivas.
+
+Nossa História Temos orgulho de ser parte integrante da comunidade que servimos. Por meio de programas de extensão, seminários de educação em saúde e parcerias com organizações locais, buscamos promover uma comunidade mais saudável e fornecer recursos para os necessitados.
