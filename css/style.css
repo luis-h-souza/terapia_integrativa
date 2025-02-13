@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Oxygen:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 
 *,
 *::before,
@@ -53,13 +54,13 @@
   --ligth3: #f2f2f5;
   --ligth4: #fafafc;
 
-  --shadow: hsla(240, 2%, 23%, 0.2);
+  --shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 body {
   scroll-behavior: smooth;
   min-height: 100vh;
-  font-family: "Oxygen", system-ui, sans-serif;
+  /* font-family: "Oxygen", system-ui, sans-serif; */
   background-color: var(--bg-color);
   overflow-x: hidden;
 }
@@ -96,7 +97,7 @@ h4,
 h5,
 h6 {
   letter-spacing: -0.025em;
-  font-family: "Oxygen", system-ui, sans-serif;
+  font-family: "Fahkwang", system-ui, sans-serif !important;
   color: var(--ligth4);
 }
 
@@ -227,17 +228,18 @@ h6 {
 /* SERVIÇOS */
 
 .services__info {
-  margin-block: 12rem;
+  margin-block: 7rem;
   & h2 {
     color: var(--darker-color);
   }
   & h4 {
     color: var(--subtle-color);
+    text-shadow: var(--shadow);
     opacity: 0.3;
   }
   & p {
     color: var(--dark2);
-    width: 50ch;
+    width: 80ch;
     text-align: center;
   }
   & .subtitle {
@@ -246,10 +248,10 @@ h6 {
   }
 }
 
-.cards {
+.carrossel {
   display: inline-flex;
   white-space: nowrap;
-
+  
   & .cardss {
     display: flex;
     gap: 1rem;
@@ -262,10 +264,9 @@ h6 {
     width: 24rem;
     border: none;
     position: relative;
-    animation: slide 10s linear infinite;
-
     --mgcards: 1rem;
     margin: var(--mgcards);
+    animation: slide 12s linear infinite;
 
     & .card-body {
       padding: 2rem;
@@ -274,7 +275,7 @@ h6 {
       color: var(--ligth4);
       position: absolute;
       bottom: 0;
-      
+
       & .card-text-title {
         font-family: "Fahkwang", sans-serif;
         font-size: 2rem;
@@ -292,7 +293,7 @@ h6 {
         max-height: max-content;
         background-color: var(--ligther-color);
         color: var(--darker-color);
-        opacity: 0.8;
+        opacity: 0.7;
         transition: 0.3s linear;
       }
     }
@@ -314,14 +315,85 @@ h6 {
     }
   }
 }
+
 @keyframes slide {
-  to {
-    transform: translateX(calc(-100% - var(--mgcards)));
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
-.cards .massagem {
-  animation-timing-function: 0s;
+/* PROFESSIONAIS */
+
+.cardss-pro {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  filter: contrast(100%);
+  &:hover img {
+    filter: contrast(50%);
+    transition: 0.3s ease-in-out;
+  }
+  & img {
+    border-radius: 32px;
+    /* width: 640px;
+    height: auto; */
+  }
+  & h3 {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  & p {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    z-index: 1000;
+    max-width: fit-content;
+    padding: 1rem 25.6px;
+    color: var(--ligth4);
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  & button {
+    position: absolute;
+    bottom: 4%;
+    right: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* SOBRE */
+
+.about-left {
+  & h2 {
+    font-family: "Fahkwang", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--subtle-color);
+    margin-bottom: 24px;
+  }
+  & p {
+    font-size: 18px;
+    max-width: 80%;
+    color: var(--dark2);
+    
+    font-weight: 500;
+    margin-bottom: 138px;
+  }
+  & img {
+    border-radius: 32px;
+  }
+}
+
+.about-right img {
+  border-radius: 32px;
+  height: auto;
+  width: 544px;
 }
 
 /* CONTATO */
@@ -356,7 +428,7 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: var(--darker-color);
+  background-image: linear-gradient(var(--bg-color), var(--darker-color));
 }
 
 .footer-wrapper {
@@ -522,7 +594,7 @@ i:hover {
 .social__link {
   cursor: pointer;
   background-color: var(--shadow);
-  aspect-ratio: 1/1;
+  border-radius: 50%;
   height: 3rem;
   width: 48px;
   color: var(--subtle-color);
